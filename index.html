@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in">Login</span>
                     </a>
                 </span>
@@ -88,7 +88,7 @@
                     <img src="img/logo.png" width="180px" height="100px" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" data-toggle="modal" data-target="#book" class="btn btn-warning btn-block nav-link">Reserve Table</a>
+                    <a role="button" id="bookButton" class="btn btn-warning btn-block nav-link">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -98,10 +98,10 @@
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                     <h4 class="modal-title">Reserve a Table</h4>
-                     <button type="button" class="close" data-dismiss="modal">
-                         &times;
-                     </button>
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -197,6 +197,9 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -249,50 +252,6 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center col-6">
-            <div class="card" id="booking">
-                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="number" class="col-md-3 col-form-label">Number of Guests</label>
-                            <div class="col-md-9 align-items-center">
-                                <input type="radio" id="one" name="number" value="one">
-                                <label for="one"> 1 </label>
-                                <input type="radio" id="two" name="number" value="two">
-                                <label for="two"> 2 </label>
-                                <input type="radio" id="three" name="number" value="three">
-                                <label for="three"> 3 </label>
-                                <input type="radio" id="four" name="number" value="four">
-                                <label for="four"> 4 </label>
-                                <input type="radio" id="five" name="number" value="five">
-                                <label for="five"> 5 </label>
-                                <input type="radio" id="six" name="number" value="six">
-                                <label for="six"> 6 </label>
-                            </div>
-    
-                            <label for="dt" class="col-md-3 col-form-label">Date and Time</label>
-                            <div class="col-5 col-md-5 col-sm-12">
-                                <input type="date" class="form-control" id="dt" name="date" placeholder="Date">
-                            </div>
-                            <div class="col-3 col-md-3 col-sm-12">
-                                <input type="time" class="form-control" id="dt" name="time" placeholder="Time">
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-10 col-md-10">
-                                    <button type="submit" class="btn btn-primary">
-                                        Reserve
-                                    </button>
-                                </div>
-                           </div>
-                        </div>
-                    </form>
-                </div>
-             </div>
-        </div>
-
-    </div>
-
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -336,6 +295,33 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $('#mycarousel').carousel({interval:1000});
+            $('#carouselButton').click(function(){
+                if($('#carouselButton').children('span').hasClass('fa-pause')){
+                    $('#mycarousel').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+                }
+                else{
+                    $('#mycarousel').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+                }
+                
+            });
+
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('show')
+            });
+
+            $('#bookButton').click(function(){
+                $('#book').modal('show')
+            });
+        })
+    </script>
+
 </body>
 
 </html>

@@ -1,71 +1,72 @@
-.row-header{
-    margin: 0px auto;
-    padding: 0px auto;
+.row-header {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
 }
 
 .row-content{
-    margin: 30px auto;
-    padding: 10px 20px 10px 20px;
-    border-bottom: 1px ridge;
-    min-height: 400px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-.space{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.footer {
+  background-color: #d1c4e9;
+  margin: 0px auto;
+  padding: 20px 0px;
 }
-
-.footer{
-    background-color: #c9bddf;
-    margin: 0px auto;
-    padding: 20px 0px 20px 0px;
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: #9575cd;
+  color: floralwhite;
 }
-
-.jumbotron{
-    padding: 70px 30px 70px 30px;
-    margin: 0px auto;
-    background: rgb(173, 132, 173);
-    color: floralwhite;
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
 }
-
-.history{
-    margin: 80px 0px 80px 0px;
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
 }
-
-.address{
-    font-size: 80%;
-    margin: 0px;
-    color: grey;
+.navbar-dark {
+  background-color: #512dab;
 }
-
-body{
-    padding: 50px 0px 50px 0px;
-    margin: 0px auto 0px auto;
-    z-index: 0;
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
 }
-
-.navbar-dark{
-    background-color: rgb(137, 73, 197);
-}
-
-.tab-content{
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-}
-
 .carousel {
-    background: #5120ad;
+  background: #512dab;
+}
+.carousel .carousel-item {
+  height: 300px;
+}
+.carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
 }
 
-.carousel-item{
-    height: 300px;
+.modal-header{
+  background-color: rgb(121, 0, 177);
+  color: floralwhite;
 }
 
-.carousel-item img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 300px;
+.modal-body{
+  background-color: rgb(206, 193, 255);
+}
+
+.close {
+  color: #fff; 
+  opacity: 1;
 }
