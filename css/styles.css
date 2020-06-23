@@ -10,6 +10,11 @@
     min-height: 400px;
 }
 
+.space{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .footer{
     background-color: #c9bddf;
     margin: 0px auto;
